@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoogleDriveIntegration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10G-Qx-0Z4">
+                                <rect key="frame" x="167" y="424" width="80" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="9kE-Dn-gt4"/>
+                                    <constraint firstAttribute="width" constant="80" id="hGn-nB-vfm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="actionBtnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ven-qN-Gun"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="10G-Qx-0Z4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dgH-RH-F8V"/>
+                            <constraint firstItem="10G-Qx-0Z4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="liu-P5-Clt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="136"/>
+        </scene>
+        <!--Cloud FilesVC-->
+        <scene sceneID="adq-A9-kxc">
+            <objects>
+                <viewController storyboardIdentifier="CloudFilesVC" id="Cuh-Rt-qg4" customClass="CloudFilesVC" customModule="GoogleDriveIntegration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MZk-Nh-FeW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0T1-qx-Tvv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Cuh-Rt-qg4" id="JUu-iO-W72"/>
+                                    <outlet property="delegate" destination="Cuh-Rt-qg4" id="hAo-bY-ckk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0T1-qx-Tvv" firstAttribute="leading" secondItem="bJx-s2-RC5" secondAttribute="leading" id="LOz-y9-gMf"/>
+                            <constraint firstItem="0T1-qx-Tvv" firstAttribute="top" secondItem="bJx-s2-RC5" secondAttribute="top" id="d1y-mW-BBP"/>
+                            <constraint firstItem="bJx-s2-RC5" firstAttribute="trailing" secondItem="0T1-qx-Tvv" secondAttribute="trailing" id="ekx-ir-Jtg"/>
+                            <constraint firstItem="bJx-s2-RC5" firstAttribute="bottom" secondItem="0T1-qx-Tvv" secondAttribute="bottom" id="uuq-uj-iqT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bJx-s2-RC5"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewFiles" destination="0T1-qx-Tvv" id="WuT-h6-34w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="349-89-dH9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="139"/>
+        </scene>
+    </scenes>
+</document>
