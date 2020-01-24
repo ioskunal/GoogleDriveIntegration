@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         } else {
             GIDSignIn.sharedInstance().delegate = self
             GIDSignIn.sharedInstance().uiDelegate = self
-            GIDSignIn.sharedInstance().scopes = [kGTLRAuthScopeDrive]
+            GIDSignIn.sharedInstance().scopes = [kGTLRAuthScopeDriveReadonly]
             GIDSignIn.sharedInstance()?.signIn()
         }
     }
