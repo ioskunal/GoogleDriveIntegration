@@ -46,7 +46,7 @@ class CloudFilesVC: UIViewController {
                 self?.token = pageToken
                 self?.tableViewFiles.reloadData()
             } else {
-                // show error alert
+                Alert.show(message: error?.localizedDescription ?? "")
             }
             self?.tableViewFiles.showsInfiniteScrolling = self?.token == nil ? false : true // disable infinite scrolling if the limit has been reached
             self?.tableViewFiles.infiniteScrollingView.stopAnimating()

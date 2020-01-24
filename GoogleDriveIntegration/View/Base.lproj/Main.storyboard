@@ -16,25 +16,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10G-Qx-0Z4">
-                                <rect key="frame" x="167" y="424" width="80" height="48"/>
+                                <rect key="frame" x="16" y="774" width="382" height="48"/>
+                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="9kE-Dn-gt4"/>
-                                    <constraint firstAttribute="width" constant="80" id="hGn-nB-vfm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Login"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="actionBtnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ven-qN-Gun"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Biv-Jz-PlY">
+                                <rect key="frame" x="16" y="706" width="382" height="48"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Fetch Files">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionBtnFetchFiles:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gYk-ym-8fH"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="10G-Qx-0Z4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dgH-RH-F8V"/>
-                            <constraint firstItem="10G-Qx-0Z4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="liu-P5-Clt"/>
+                            <constraint firstItem="10G-Qx-0Z4" firstAttribute="top" secondItem="Biv-Jz-PlY" secondAttribute="bottom" constant="20" id="L1K-55-Pd7"/>
+                            <constraint firstItem="Biv-Jz-PlY" firstAttribute="trailing" secondItem="10G-Qx-0Z4" secondAttribute="trailing" id="QQq-eP-JUv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="10G-Qx-0Z4" secondAttribute="bottom" constant="40" id="Y24-hP-hfz"/>
+                            <constraint firstItem="Biv-Jz-PlY" firstAttribute="leading" secondItem="10G-Qx-0Z4" secondAttribute="leading" id="Zfl-vD-36t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="10G-Qx-0Z4" secondAttribute="trailing" constant="16" id="d8Q-fA-mjo"/>
+                            <constraint firstItem="10G-Qx-0Z4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jeo-Ec-V5G"/>
+                            <constraint firstItem="Biv-Jz-PlY" firstAttribute="height" secondItem="10G-Qx-0Z4" secondAttribute="height" id="xmq-C4-alk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="fetchFilesButton" destination="Biv-Jz-PlY" id="3ai-rH-L2X"/>
+                        <outlet property="loginButton" destination="10G-Qx-0Z4" id="TQZ-ac-8vU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
