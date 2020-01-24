@@ -18,6 +18,7 @@
 		6E0FA20923CF1D6200802357 /* CloudFilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0FA20823CF1D6200802357 /* CloudFilesManager.swift */; };
 		6E0FA21323CF305F00802357 /* CloudFileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0FA21123CF305F00802357 /* CloudFileTableCell.swift */; };
 		6E0FA21423CF305F00802357 /* CloudFileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E0FA21223CF305F00802357 /* CloudFileTableCell.xib */; };
+		6E2B606B23DB72DB0032F8FD /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2B606A23DB72DB0032F8FD /* Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		6E0FA20823CF1D6200802357 /* CloudFilesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFilesManager.swift; sourceTree = "<group>"; };
 		6E0FA21123CF305F00802357 /* CloudFileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFileTableCell.swift; sourceTree = "<group>"; };
 		6E0FA21223CF305F00802357 /* CloudFileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CloudFileTableCell.xib; sourceTree = "<group>"; };
+		6E2B606A23DB72DB0032F8FD /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		72D4912B3A2A91D905556590 /* Pods-GoogleDriveIntegration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDriveIntegration.debug.xcconfig"; path = "Target Support Files/Pods-GoogleDriveIntegration/Pods-GoogleDriveIntegration.debug.xcconfig"; sourceTree = "<group>"; };
 		B0679A8FAF30F3D2758CE66D /* Pods_GoogleDriveIntegration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleDriveIntegration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 		6E0FA1F123CEF81500802357 /* GoogleDriveIntegration */ = {
 			isa = PBXGroup;
 			children = (
+				6E2B606923DB72D00032F8FD /* Helpers */,
 				6E0FA20D23CF301D00802357 /* Manager */,
 				6E0FA20F23CF302B00802357 /* View */,
 				6E0FA20E23CF302500802357 /* Controller */,
@@ -132,6 +135,14 @@
 				6E0FA21223CF305F00802357 /* CloudFileTableCell.xib */,
 			);
 			path = CloudFileTableCell;
+			sourceTree = "<group>";
+		};
+		6E2B606923DB72D00032F8FD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6E2B606A23DB72DB0032F8FD /* Alerts.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		BEAC251D87588CF7303C10E1 /* Pods */ = {
@@ -282,6 +293,7 @@
 				6E0FA21323CF305F00802357 /* CloudFileTableCell.swift in Sources */,
 				6E0FA1F323CEF81500802357 /* AppDelegate.swift in Sources */,
 				6E0FA1F523CEF81500802357 /* SceneDelegate.swift in Sources */,
+				6E2B606B23DB72DB0032F8FD /* Alerts.swift in Sources */,
 				6E0FA20923CF1D6200802357 /* CloudFilesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
