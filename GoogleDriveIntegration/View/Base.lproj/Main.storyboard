@@ -70,8 +70,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gEh-1C-NXZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Cuh-Rt-qg4" id="67P-Y7-Jk6"/>
+                                </connections>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0T1-qx-Tvv">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Cuh-Rt-qg4" id="JUu-iO-W72"/>
@@ -81,20 +88,24 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="0T1-qx-Tvv" firstAttribute="top" secondItem="gEh-1C-NXZ" secondAttribute="bottom" id="35x-zy-iwf"/>
+                            <constraint firstItem="gEh-1C-NXZ" firstAttribute="leading" secondItem="bJx-s2-RC5" secondAttribute="leading" id="F4J-lZ-oOc"/>
+                            <constraint firstItem="gEh-1C-NXZ" firstAttribute="top" secondItem="bJx-s2-RC5" secondAttribute="top" id="JL2-2v-DjG"/>
                             <constraint firstItem="0T1-qx-Tvv" firstAttribute="leading" secondItem="bJx-s2-RC5" secondAttribute="leading" id="LOz-y9-gMf"/>
-                            <constraint firstItem="0T1-qx-Tvv" firstAttribute="top" secondItem="bJx-s2-RC5" secondAttribute="top" id="d1y-mW-BBP"/>
                             <constraint firstItem="bJx-s2-RC5" firstAttribute="trailing" secondItem="0T1-qx-Tvv" secondAttribute="trailing" id="ekx-ir-Jtg"/>
+                            <constraint firstItem="gEh-1C-NXZ" firstAttribute="trailing" secondItem="bJx-s2-RC5" secondAttribute="trailing" id="fAB-el-VtH"/>
                             <constraint firstItem="bJx-s2-RC5" firstAttribute="bottom" secondItem="0T1-qx-Tvv" secondAttribute="bottom" id="uuq-uj-iqT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bJx-s2-RC5"/>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="gEh-1C-NXZ" id="FJF-5O-DWp"/>
                         <outlet property="tableViewFiles" destination="0T1-qx-Tvv" id="WuT-h6-34w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="349-89-dH9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="139"/>
+            <point key="canvasLocation" x="989.85507246376824" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>

@@ -13,7 +13,7 @@ import UIKit
 struct Alert {
     
     static func topMostVC() -> UIViewController? {
-        return UIApplication.shared.windows.last?.rootViewController
+        return UIApplication.shared.windows.first?.rootViewController?.presentedViewController
     }
     
     static func show(title: String? = "Whoops!", message: String) {

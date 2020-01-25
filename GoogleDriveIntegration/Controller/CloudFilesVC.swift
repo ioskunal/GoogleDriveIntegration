@@ -13,12 +13,12 @@ import SVPullToRefresh
 class CloudFilesVC: UIViewController {
 
     @IBOutlet weak var tableViewFiles: UITableView!
-    
+    @IBOutlet weak var searchBar: UISearchBar!
+
     //MARK:- VARIABLES
     
     internal var arrFiles = [GTLRDrive_File]()
     internal let service = GTLRDriveService()
-    internal var searchText = ""
     internal var token: String?
 
     //MARK:- PREDEFINED
@@ -38,9 +38,9 @@ class CloudFilesVC: UIViewController {
         fetchFromDrive()
     }
     
-    func fetchFromDrive() {
+    func fetchFromDrive(_ strSearchText: String = "") {
         let drive = CloudFilesManager(service)
-        drive.listAllFiles(searchText, token: token) { [weak self] (files, pageToken, error) in
+        drive.listAllFiles(strSearchText, token: token) { [weak self] (files, pageToken, error) in
             if let arrFiles = files {
                 pageToken != nil ? (self?.arrFiles += arrFiles) :  (self?.arrFiles = arrFiles)
                 self?.token = pageToken
@@ -55,7 +55,7 @@ class CloudFilesVC: UIViewController {
 
 }
 
-extension CloudFilesVC: UITableViewDelegate, UITableViewDataSource {
+extension CloudFilesVC: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
          return arrFiles.count
@@ -79,4 +79,12 @@ extension CloudFilesVC: UITableViewDelegate, UITableViewDataSource {
          return 80
      }
     
+    //MARK:- SEARCH BAR DELEGATE
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        token = nil
+        fetchFromDrive(searchBar.text ?? "")
+        searchBar.endEditing(true)
+    }
+
 }
