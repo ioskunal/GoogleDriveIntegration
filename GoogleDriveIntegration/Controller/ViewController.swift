@@ -9,6 +9,7 @@
 import UIKit
 import GoogleSignIn
 import GoogleAPIClientForREST
+import GTMSessionFetcher
 
 class ViewController: UIViewController {
     
@@ -52,7 +53,7 @@ class ViewController: UIViewController {
             initialise()
         } else {
             GIDSignIn.sharedInstance().delegate = self
-            GIDSignIn.sharedInstance().uiDelegate = self
+            GIDSignIn.sharedInstance()?.presentingViewController = self
             GIDSignIn.sharedInstance().scopes = [kGTLRAuthScopeDriveReadonly]
             GIDSignIn.sharedInstance()?.signIn()
         }
@@ -65,7 +66,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: GIDSignInDelegate, GIDSignInUIDelegate {
+extension ViewController: GIDSignInDelegate {
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let _ = error {
