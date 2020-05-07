@@ -7,8 +7,8 @@ target 'GoogleDriveIntegration' do
 
   # Pods for GoogleDriveIntegration
 
-  pod 'GoogleAPIClientForREST/Drive', '~> 1.2.1'
-  pod 'GoogleSignIn', '~> 4.1.1'
+  pod 'GoogleAPIClientForREST/Drive'
+  pod 'GoogleSignIn'
   pod 'Kingfisher'
   pod 'SVPullToRefresh'
 
